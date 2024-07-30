@@ -1,0 +1,13 @@
+<!-- views/users/show.ejs -->
+<h1><%= user.username %>'s Travels</h1>
+
+<h2>Travels</h2>
+<ul>
+  <% user.travels.forEach(travel => { %>
+    <li>
+        <img src="<%= travel.photo %>" alt="<%= travel.title %>">
+      <h3><%= travel.title %></h3>
+      <p><%= travel.description %></p>
+    </li>
+  <% }); %>
+</ul>

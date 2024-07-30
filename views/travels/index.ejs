@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <div class="container">
+    <h1>Your Travels</h1>
+    <div class="travel-container">
+      <% travels.forEach((travel)=> { %>
+        <a href="/users/<%= user._id %>/travels/<%= travel._id %>" class="travel-display">
+          <img src="<%= travel.photo %>" alt="<%= travel.title %>">
+          <h3><%= travel.title %></h3>
+        </a>
+      <% }) %>
+    </div>
+    <a href="/users/<%=user._id%>/travels/new" class="add-travel">Add a Travel Blog</a>
+  </div>
+</html>

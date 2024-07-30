@@ -1,0 +1,31 @@
+<!-- views/applications/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editing <%= travel.title %> BLog</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%= travel.title %> BLog</h1>
+
+      <form  action="/users/<%= user._id %>/travels/<%= travel._id %>?_method=PUT"
+        method="POST">
+   
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="<%= travel.title%>">
+    
+    <label for="description">Description:</label>
+    <input type="text" name="description" value="<%=travel.description%>">
+    
+    <label for="date">Date:</label>
+    <input type="date" name="date" value="<%= travel.date.toISOString().slice(0, 10) %>">
+
+    <label for="photo">Photo:</label>
+    <input type="text" name="photo" value="<%=travel.photo%>">
+   
+    <button type="submit">Update Blog</button>
+
+  </form>
+  </body>
