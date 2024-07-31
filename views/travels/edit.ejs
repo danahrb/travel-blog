@@ -1,31 +1,29 @@
-<!-- views/applications/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editing <%= travel.title %> BLog</title>
+  <title>Editing <%= travel.title %> Blog</title>
+  <link rel="stylesheet" href="/stylesheets/forms.css">
 </head>
 <body>
+  <div class="container">
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= travel.title %> BLog</h1>
-
-      <form  action="/users/<%= user._id %>/travels/<%= travel._id %>?_method=PUT"
-        method="POST">
-   
-    <label for="title">Title:</label>
-    <input type="text" name="title" value="<%= travel.title%>">
-    
-    <label for="description">Description:</label>
-    <input type="text" name="description" value="<%=travel.description%>">
-    
-    <label for="date">Date:</label>
-    <input type="date" name="date" value="<%= travel.date.toISOString().slice(0, 10) %>">
-
-    <label for="photo">Photo:</label>
-    <input type="text" name="photo" value="<%=travel.photo%>">
-   
-    <button type="submit">Update Blog</button>
-
-  </form>
-  </body>
+    <h1>Edit <%= travel.title %> Blog</h1>
+    <div class="image-container">
+      <img src="<%= travel.photo %>" alt="<%= travel.title %>">
+    </div>
+    <form action="/users/<%= user._id %>/travels/<%= travel._id %>?_method=PUT" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" value="<%= travel.title %>">
+      <label for="description">Description:</label>
+      <textarea name="description"><%= travel.description %></textarea>
+      <label for="date">Date:</label>
+      <input type="date" name="date" value="<%= travel.date.toISOString().slice(0, 10) %>">
+      <label for="photo">Photo:</label>
+      <input type="text" name="photo" value="<%= travel.photo %>">
+      <button type="submit">Update Blog</button>
+    </form>
+  </div>
+</body>
+</html>

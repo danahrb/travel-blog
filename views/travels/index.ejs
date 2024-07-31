@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/index2.css">
+  <title>Your Travels</title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
   <div class="container">
-    <h1>Your Travels</h1>
+    <h2>Blog Posts</h2>
     <div class="travel-container">
       <% travels.forEach((travel)=> { %>
         <a href="/users/<%= user._id %>/travels/<%= travel._id %>" class="travel-display">

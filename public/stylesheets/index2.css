@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.travel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+
+.travel-display {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.travel-display:hover {
+  box-shadow: 0 8px 12px rgba(45, 77, 144, 0.15);
+}
+
+.travel-display img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.travel-display h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+
+.add-travel {
+  display: block;
+  background-color: #2b5b80;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.add-travel:hover {
+  background-color: #3b7398;
+}
+ 
