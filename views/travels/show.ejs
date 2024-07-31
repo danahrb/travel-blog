@@ -8,19 +8,24 @@
 
 </head>
 <body>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1><%= travel.title %> at <%= travel.date.toDateString() %></h1>
-  <img src="<%= travel.photo %>" alt="<%= travel.title %>">
-  <p>Description: <%= travel.description %></p>
+    <%- include('../partials/_navbar.ejs') %>
 
-  <a href="/users/<%= user._id %>/travels/<%= travel._id %>/edit">
-    Edit this Blog
-  </a>
+  <div class="travel-content">
+    <h1><%= travel.title %></h1>
+    <p>Date: <%= travel.date.toDateString() %></p>
+    <div class="photo-description">
+      <img src="<%= travel.photo %>" alt="<%= travel.title %>">
+      <p><%= travel.description %></p>
+    </div>
 
-  <form
-    action="/users/<%= user._id %>/travels/<%= travel._id %>?_method=DELETE"
-    method="POST">
-    <button type="submit">Delete this Blog</button>
-  </form>
+    <div class="buttons">
+      <a href="/users/<%= user._id %>/travels/<%= travel._id %>/edit">Edit this Blog</a>
+      <form
+        action="/users/<%= user._id %>/travels/<%= travel._id %>?_method=DELETE"
+        method="POST">
+        <button id="delete" type="submit">Delete this Blog</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
