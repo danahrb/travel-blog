@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .travels-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .travels-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+  }
+
+  .travels-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333333;
+  }
+
+  .travels-container ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .travels-container ul li {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .travels-container ul li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .travels-container ul li h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #333333;
+  }
+
+  .travels-container ul li p {
+    color: #666666;
+  }
+
+  @media (min-width: 768px) {
+    .travels-container ul li {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .travels-container ul li img {
+      max-width: 300px;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+    }
+  }

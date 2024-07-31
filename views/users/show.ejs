@@ -1,14 +1,26 @@
-<!-- views/users/show.ejs -->
-
-<h1><%= user.username %>'s Travels</h1>
-
-<h2>Travels</h2>
-<ul>
-  <% user.travels.forEach(travel => { %>
-    <li>
-        <img src="<%= travel.photo %>" alt="<%= travel.title %>">
-      <h3><%= travel.title %></h3>
-      <p><%= travel.description %></p>
-    </li>
-  <% }); %>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= user.username %>'s Travels</title>
+  <link rel="stylesheet" href="/stylesheets/usersshow.css">
+</head>
+<body>
+  <div class="travels-container">
+    <h1><%= user.username %>'s Travels</h1>
+    <h2>Travels</h2>
+    <ul>
+      <% user.travels.forEach(travel => { %>
+        <li>
+          <img src="<%= travel.photo %>" alt="<%= travel.title %>">
+          <div>
+            <h3><%= travel.title %></h3>
+            <p><%= travel.description %></p>
+          </div>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>

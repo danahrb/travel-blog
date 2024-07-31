@@ -4,11 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= travel.title %></title>
-  <link rel="stylesheet" href="/stylesheets/show.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
 
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .travel-content {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .travel-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333333;
+    }
+
+    .travel-content p {
+      color: #666666;
+      margin-bottom: 1.5rem;
+    }
+
+    .photo-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .photo-description img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .buttons a, .buttons button {
+      background-color: #204772;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .buttons a:hover, .buttons button:hover {
+      background-color: #264567;
+    }
+
+    #delete {
+      background-color: #dc3545;
+    }
+
+    #delete:hover {
+      background-color: #c82333;
+    }
+
+    @media (min-width: 768px) {
+      .photo-description {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .photo-description img {
+        max-width: 400px;
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <%- include('../partials/_navbar.ejs') %>
+  <%- include('../partials/_navbar.ejs') %>
 
   <div class="travel-content">
     <h1><%= travel.title %></h1>
