@@ -9,8 +9,8 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
+  <h2>Blog Posts</h2>
   <div class="container">
-    <h2>Blog Posts</h2>
     <div class="travel-container">
       <% travels.forEach((travel)=> { %>
         <a href="/users/<%= user._id %>/travels/<%= travel._id %>" class="travel-display">
@@ -19,6 +19,6 @@
         </a>
       <% }) %>
     </div>
-    <a href="/users/<%=user._id%>/travels/new" class="add-travel">Add a Travel Blog</a>
   </div>
+  <a href="/users/<%=user._id%>/travels/new" class="add-travel">Add a Travel Blog</a>
 </html>
