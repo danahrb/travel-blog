@@ -19,7 +19,7 @@ The goal of the Travel Blog is to inspire and inform readers, encouraging them t
 
 ## Getting Started
 
-To get started with the Travel Blog, users can visit the website to sign up/sign and the start adding and exploring the various blog posts. The homepage typically features the latest blog posts.
+To get started with the Travel Blog, users can visit the website to sign up/sign and start adding and exploring the various blog posts. The homepage typically features the latest blog posts.
 
 
 ## Screenshots

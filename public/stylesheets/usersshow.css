@@ -67,16 +67,3 @@
   .travels-container ul li p {
     color: #666666;
   }
-
-  @media (min-width: 768px) {
-    .travels-container ul li {
-      flex-direction: row;
-      text-align: left;
-    }
-
-    .travels-container ul li img {
-      max-width: 300px;
-      margin-right: 1.5rem;
-      margin-bottom: 0;
-    }
-  }
